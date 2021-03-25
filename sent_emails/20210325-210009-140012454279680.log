@@ -1,0 +1,26 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: Password reset on localhost:8000
+From: webmaster@localhost
+To: raphaelmar@hotmail.fr
+Date: Thu, 25 Mar 2021 21:00:09 -0000
+Message-ID: 
+ <161670600986.18732.13628360290425587041@ws-ce53e602-1b0b-454e-8226-3ff39fcd0cff>
+
+
+You're receiving this email because you requested a password reset for your user account at localhost:8000.
+
+Please go to the following page and choose a new password:
+
+http://localhost:8000/accounts/reset/MQ/ak33o9-d204a44fcfc2752357c355f047c04a67/
+
+Your username, in case you’ve forgotten: raphaelmar
+
+Thanks for using our site!
+
+The localhost:8000 team
+
+
+
+-------------------------------------------------------------------------------
