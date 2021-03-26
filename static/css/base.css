@@ -1,4 +1,6 @@
-body{
-    color: blue;
-}
 
+body{
+    background: url('/media/ITF_homepage.jpg') no-repeat center center fixed;
+    background-size: cover;
+
+}
