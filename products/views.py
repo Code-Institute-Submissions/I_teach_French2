@@ -6,6 +6,7 @@ from django.contrib import messages
 from django.db.models import Q
 from .models import Product, Level
 
+
 # Create your views here.
 
 def all_products(request):
@@ -37,4 +38,6 @@ def all_products(request):
     }
 
     return render(request, 'products/products.html', context)
+
+
     

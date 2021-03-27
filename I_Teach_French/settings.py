@@ -132,3 +132,7 @@ LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 EMAIL_FILE_PATH = str(BASE_DIR.joinpath('sent_emails'))
+
+STRIPE_PUBLIC_KEY ='pk_test_51IZFBcH1ShqjMsUgk6QpeFvQe1b4sWr5hwRI54uSo2HSgjYV7d8uyZiEdgTBEbxWdgcxeFAltzbQGrRD51qcqino00NF59N3Kx'
+
+STRIPE_PRIVATE_KEY ='sk_test_51IZFBcH1ShqjMsUgbj196eJgRVCJjJeUh5nvS8yHaaqJ2LwJ4GY2rbGB97M1AbpN3IMoZYrAa1ypIFfJiacFCrFc00HgZmyYxE'

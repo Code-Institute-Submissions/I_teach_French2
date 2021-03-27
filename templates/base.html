@@ -51,12 +51,12 @@
         
   <div class="container-fluid">
     <form class="d-flex">
-      <input class="form-control me-2" type="search" name="q" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit">Search our resources</button>
+      <input class="form-control me-2" type="search" name="q" placeholder="Search our resources" aria-label="Search">
+      <button class="btn btn-outline-success btn-sm" type="submit">Search</button>
             
     </form>
-    <li class="nav-item">
-         <a class="btn btn-outline-primary" href="{% url 'logout' %}" role="button">Log out</a>
+    <li class="nav-item" id="logout">
+         <a class="btn btn-outline-danger" href="{% url 'logout' %}" role="button" >Log out</a>
         </li>
          {% else %}
     <li class="nav-item">
