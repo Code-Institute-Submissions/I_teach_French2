@@ -7,20 +7,12 @@ from django.views.decorators.csrf import csrf_exempt
 
 import stripe
 
-stripe.api_key = settings.STRIPE_PRIVATE_KEY
 
 # Create your views here.
 
 def donations(request):
-    return render(request, 'donations.html')
 
-
-def success(request):
-    return render(request, 'success.html')
-
-
-@csrf_exempt
-def checkout(request):
+    stripe.api_key = settings.STRIPE_PRIVATE_KEY
 
     session = stripe.checkout.Session.create(
         payment_method_types=['card'],
@@ -31,9 +23,20 @@ def checkout(request):
         mode='payment',
         success_url=request.build_absolute_uri(reverse('success')) + '?session_id={CHECKOUT_SESSION_ID}',
         cancel_url=request.build_absolute_uri(reverse('donations')),
+        # success_url= "https://8000-amber-anglerfish-it1rj2m4.ws-eu03.gitpod.io/donations/success" + '?session_id={CHECKOUT_SESSION_ID}',
+        # cancel_url= "https://8000-amber-anglerfish-it1rj2m4.ws-eu03.gitpod.io/donations/",
     )
 
-    return JsonResponse({
-        'session_id': session.id,
-        'stripe_public_key': settings.STRIPE_PUBLIC_KEY
-    })
+    context ={
+        'session_id' : session.id,
+        'stripe_public_key' : settings.STRIPE_PUBLIC_KEY
+    }
+
+    return render(request, 'donations.html', context)
+
+
+def success(request):
+    return render(request, 'success.html')
+
+def checkout(request):
+    return render(request, 'success.html')
