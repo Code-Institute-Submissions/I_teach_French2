@@ -9,3 +9,51 @@ body{
     padding-left: 1em;
     
 }
+
+.navbar-brand{
+
+    font-family: 'Lobster', cursive;
+    font-size: x-large;
+   
+
+}
+
+.jumbotron{
+    padding-top: 2em;
+}
+
+#welcome{
+
+    font-family: 'Lobster', cursive;
+    font-size: x-large;
+
+}
+
+#register_btn{
+
+    padding-left: 1em;
+}
+
+#login_btn{
+
+    padding-left: 1em;
+}
+#login{
+
+    padding-top: 1em;
+
+}
+
+#user{
+    padding-top: 1em;
+}
+
+#register{
+    padding-top: 1em;
+
+}
+
+#donate{
+    padding-top: 1em;
+
+}

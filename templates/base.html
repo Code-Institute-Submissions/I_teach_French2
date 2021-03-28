@@ -23,6 +23,8 @@
     {% block corejs %}
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script> 
         <script src="https://kit.fontawesome.com/55f833db8c.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
     {% endblock %}
 
     {% block extrajs %}
@@ -32,7 +34,7 @@
 </head>
 <body>
     {% block page_header %}
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href=" {% url 'home' %} ">I Teach French</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,24 +49,30 @@
         <li class="nav-item">
           <a class="nav-link active" href="{% url 'donations' %}">Donate</a>
         </li>
-        <nav class="navbar navbar-light bg-light">
+        <nav class="navbar navbar-dark bg-dark">
         
   <div class="container-fluid">
     <form class="d-flex">
       <input class="form-control me-2" type="search" name="q" placeholder="Search our resources" aria-label="Search">
-      <button class="btn btn-outline-success btn-sm" type="submit">Search</button>
+      <button class="btn btn-outline-light" type="submit">Search</button>
             
     </form>
     <li class="nav-item" id="logout">
-         <a class="btn btn-outline-danger" href="{% url 'logout' %}" role="button" >Log out</a>
+         <a class="nav-link active" href="{% url 'logout' %}">Log out</a>
         </li>
          {% else %}
-    <li class="nav-item">
-         <a class="btn btn-outline-primary" href="{% url 'login' %}" role="button">Log in</a>
+    
+         <nav class="navbar navbar-dark bg-dark">
+          <div class="container-fluid">
+        <span class="navbar-brand">Free resources for busy teachers</span>
+         </div>
+        </nav>
+    <!--<li class="nav-item" id="login_btn">
+         <a class="btn btn-outline-light" href="{% url 'login' %}" role="button">Log in</a>
         </li>
-    <li class="nav-item">
-         <a class="btn btn-outline-success" href="{% url 'signup' %}" role="button">Register</a>
-        </li>
+    <li class="nav-item" id="register_btn">
+         <a class="btn btn-outline-light" href="{% url 'signup' %}" role="button">Register</a>
+        </li>-->
         {% endif %}
   </div>
 </nav>

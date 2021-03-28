@@ -8,16 +8,25 @@
 
 
 {% if user.is_authenticated %}
-
+<div class="container fluid" id="user">
     Hi {{user.username}}!
-    <p><a class="btn btn-outline-danger" href="{% url 'logout' %}">Log Out</a></p>
-    <p><a class="btn btn-outline-warning"href="{% url 'password_reset' %}">Reset Password</a></p>
+    <p>Here, you will find resources that can be used for teaching French in schools. They are free, and always will be, but if you like our work you can <a href="{% url 'donations' %}">make a donation</a> to support us, otherwise just check our <a href="{% url 'products' %}">resources!</a></p>
+    <p><a class="btn btn-outline-dark" href="{% url 'logout' %}">Log Out</a></p>
+    <p><a class="btn btn-outline-dark"href="{% url 'password_reset' %}">Reset Password</a></p>
+</div>
     {% else %}
     
-    <p>Log in or register to download our resources</p>
-    <a class="btn btn-outline-primary" href="{% url 'login' %}" role="button">Log in</a>
-    <a class="btn btn-outline-success" href="{% url 'signup' %}" role="button">Register</a>
-    
+<div class="jumbotron jumbotron-fluid col-lg offset-4">
+  <div class="container" id="welcome">
+    <h1>Welcome to I teach French</h1>
+    <p>Your site for free, classroom ready French teaching resources!</p>
+    <p>Log in or register to download resources</p>
+  </div>
+</div>
+<div class="container col-lg offset-4">
+    <a class="btn btn-outline-dark" href="{% url 'login' %}" role="button">Log in</a>
+    <a class="btn btn-outline-dark" href="{% url 'signup' %}" role="button">Register</a>
+</div>
 
 {% endif %}
 {% endblock %}
