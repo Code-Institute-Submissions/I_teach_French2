@@ -1,45 +1,126 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# I teach French: a free resources website for teachers of French
 
-Welcome raphaelmar,
+As a teacher, we spend a lot of time preparing resources that are engaging for students to support teaching and learning. A good resource can make a real difference in helping students understanding concepts. However, creating resources is very time consuming for teachers who also need to prepare and deliver lessons, as well as mark students' work. 
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+## UX
 
-## Gitpod Reminders
+### Project goals
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+I Teach French aims to provide free, easily accessible downloadable resources for teachers to use in their lessons. The search function allows users to enter key words relating to the topic they want to work on and quickly assess the nature of the resource with an image, the language skill, the level and a description in French and English, before they download it.There is a possibility to leave a donation of 5€ for users who think that they have found some value in the resources.
 
-`python3 -m http.server`
+### User stories
 
-A blue button should appear to click: *Make Public*,
+As a user of I Teach French
+* I can access a collection of free downloadable teaching resources.
+* I can search the collection with keywords in French or English.
+* I can visually assess the nature of the resource.
+* I can download the resources in one click.
+* I can create an account and receive a personalised welcome when I log in.
+* I can make a donation of €5 via Stripe if I want to encourage the creation of more material.
 
-Another blue button should appear to click: *Open Browser*.
+As the owner of the site
+* I can upload files to the site and share them with a community of teachers.
+* I can receive donations via Stripe from users.
+* I can store the resources that I have created online and easily access them.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### design choices
 
-A blue button should appear to click: *Make Public*,
+The design makes it straightforward for users to access the main feature of the site, the resources. Once their account is created, they land on the home page where they have 2 options, go to the collection or donate, they can do so via the navbar or via in-text links. If they want to donate they are redirect to Stripe's checkout where they are invited to enter their card's details to donate 5€. If they go to the resources they can scroll through the bank of resources or enter key words in the search bar to quickly access resources that might be of interest, should they find something of interest they can just click on the download button. They can go back to the home page at any time by clicking on I Teach French in the bar. The bar and the reources page are responsive and display well on mobiles tablets and laptops. The color scheme is pure black and white for ease of reading and the site's background displays a photo of Paris to match with the site's target language.
 
-Another blue button should appear to click: *Open Browser*.
+### Wireframes
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+![Home page](/static/images/ESCPHRC_home.png)
+![Review card](/static/images/review_card.png)
+![User's own review](/static/images/user_own_review.png)
+![Log in mobile view](/static/images/login_mobile_view.png)
+![Log in tablet view with side navbar](/static/images/login_tablet_sidenav.png)
 
-## Updates Since The Instructional Video
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## Features
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+* Home page
+    * 
+* Sign up page
+    * The user is invited to provide a username and a password to create a profile.
+* Log in page
+    * The user is required to enter their username and a password
+*  Profile page
+    * Here, the user can see a personalised welcome message, he is invited to go to the resources collection or to donate.
+* Resources page
+    * The user can scroll through the resource collection or use the search function to acess a specific resource, this can be done in French or English
+* Donations page
+    * The user is given the opportunity to donate 5€ to encourage resources creation and sharing, if they change their mind they can return to the main site via the navbar, if they choose to go forward with their donation, they are redirect to the Stripe checkout page where they can enter their card details. After a successful transaction they are redirected to the success page.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+## Features left to implement
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+* Users' rating of resources
+* User's comments on resources
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+## Technologies used
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+* HTML 5
+* CSS 3
+* [Bootstrap](https://www.python.org/)
+* [Python](https://www.python.org/)
+* [Django](https://www.djangoproject.com/) (framework)
+* [Javascript] (access to stripe checkout)
+* [Google Fonts](https://fonts.google.com/) (Lobster)
+* [Font Awesome](https://fontawesome.com/) (all icons)
+* [JQuery](https://jquery.com/) (triggering si)
+* [Github](https://github.com/) (code hosting platform for version control)
+* [Gitpod](https://gitpod.io/) (development environment) 
+* [Stripe](https://stripe.com/) (for payment)
+* [Heroku](https://heroku.com/) (platform where the site is deployed)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+## Testing
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+* Code validity:
 
---------
+HTML has been validated using [W3 validator](https://validator.w3.org/) and formatted using [Freeformater](https://www.freeformatter.com/).
+CSS has been validated using [W3 CSS validator](http://jigsaw.w3.org/css-validator/validator).
+Javascript code has been validated using [JSHINT](https://jshint.com/).
+Python code has been validated using [PEP8](http://pep8online.com/).
+Lightouse testing from Chrome developer's tools returned positive results (all above 90%).
 
-Happy coding!
+* Functionalities:
+
+
+## Deployment in heroku
+
+After creating the app and the MongoDB database.
+In terminal:
+
+* pip 3 freeze --local > requirements.text
+* echo web: python app.py > Procfile
+
+In Heroku:
+* create a new app (choose name and region)
+* choose the deployment method = Connect to Github
+* select this repository: raphaelmar/escph_reading_club
+* Click connect
+* in Settings, click reveal config Vars and enter the following: IP, PORT, SECRET KEY, MONGO_URI, MONGODB_Name
+
+In terminal:
+* Git add/commit/push requirements.txt and Procfile files
+
+In Heroku:
+* click enable automatic deploys
+
+## Credits
+
+### Media
+
+* The Wireframes were created using [Balsamiq](https://balsamiq.com/).
+* The 2 images used on the site are by DariuszSankowski and SCY , they were obtained from [Pixabay](https://pixabay.com/)
+
+### Acknowledgements
+
+* The main structure of this site is based on the code provided by Tim Nelson for the Task Manager mini-project presented in the Data centric module of the Full stack Web Developer course form Code Institute.
+* The code for the modal used for the delete functionality is based on [Delete Modal](https://www.w3schools.com/howto/howto_css_delete_modal.asp)
+
+### Thank you
+
+* To Everyone at Code Institute for their patience!
+* To the dedicated team of tutors who are always helpful.
+* To my mentor Reuben Ferrante for making time for me outside his timetabled hours.
+

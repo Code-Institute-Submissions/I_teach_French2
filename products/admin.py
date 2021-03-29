@@ -3,13 +3,13 @@ from .models import Product, Level
 
 # Register your models here.
 
+
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
         'name',
         'skill',
         'difficulty',
         'description',
-        'rating',
         'image',
         'resource',
     )
@@ -20,7 +20,7 @@ class ProductAdmin(admin.ModelAdmin):
 class LevelAdmin(admin.ModelAdmin):
     list_display = (
         'name',
-        
+
     )
 
 

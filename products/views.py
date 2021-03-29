@@ -15,7 +15,8 @@ def all_products(request):
     products = Product.objects.all()
     query = None
     levels = None
-    
+
+
     if request.GET:
         if 'level' in request.GET:
             levels = request.GET['level'].split(',')
@@ -25,7 +26,7 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request,"You did not enter any search criteria!")
+                messages.error(request, "You did not enter any search criteria!")
                 return redirect(reverse('products'))
 
             queries = Q(name__icontains=query) | Q(description__icontains=query)
@@ -38,6 +39,3 @@ def all_products(request):
     }
 
     return render(request, 'products/products.html', context)
-
-
-    
