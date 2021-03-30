@@ -75,7 +75,7 @@ Lightouse testing from Chrome developer's tools returned positive results.
 * Functionalities:
 
 
-## Deployment to Heroku and AWS
+## Deployment to Heroku and AWS:
 
 * pip 3 freeze --local > requirements.text
 * create procfile Procfile > web: gunicorn I_Teach_French.wsgi
