@@ -27,19 +27,11 @@ As the owner of the site
 
 The design makes it straightforward for users to access the main feature of the site, the resources. Once their account is created, they land on the home page where they have 2 options, go to the collection or donate, they can do so via the navbar or via in-text links. If they want to donate they are redirect to Stripe's checkout where they are invited to enter their card's details to donate 5€. If they go to the resources they can scroll through the bank of resources or enter key words in the search bar to quickly access resources that might be of interest, should they find something of interest they can just click on the download button. They can go back to the home page at any time by clicking on I Teach French in the bar. The bar and the reources page are responsive and display well on mobiles tablets and laptops. The color scheme is pure black and white for ease of reading and the site's background displays a photo of Paris to match with the site's target language.
 
-### Wireframes
-
-![Home page](/static/images/ESCPHRC_home.png)
-![Review card](/static/images/review_card.png)
-![User's own review](/static/images/user_own_review.png)
-![Log in mobile view](/static/images/login_mobile_view.png)
-![Log in tablet view with side navbar](/static/images/login_tablet_sidenav.png)
-
 
 ## Features
 
 * Home page
-    * 
+    * The user is invited to register or login
 * Sign up page
     * The user is invited to provide a username and a password to create a profile.
 * Log in page
@@ -78,49 +70,34 @@ The design makes it straightforward for users to access the main feature of the 
 
 HTML has been validated using [W3 validator](https://validator.w3.org/) and formatted using [Freeformater](https://www.freeformatter.com/).
 CSS has been validated using [W3 CSS validator](http://jigsaw.w3.org/css-validator/validator).
-Javascript code has been validated using [JSHINT](https://jshint.com/).
-Python code has been validated using [PEP8](http://pep8online.com/).
-Lightouse testing from Chrome developer's tools returned positive results (all above 90%).
+Lightouse testing from Chrome developer's tools returned positive results.
 
 * Functionalities:
 
 
-## Deployment in heroku
-
-After creating the app and the MongoDB database.
-In terminal:
+## Deployment to Heroku and AWS
 
 * pip 3 freeze --local > requirements.text
-* echo web: python app.py > Procfile
-
-In Heroku:
-* create a new app (choose name and region)
-* choose the deployment method = Connect to Github
-* select this repository: raphaelmar/escph_reading_club
-* Click connect
-* in Settings, click reveal config Vars and enter the following: IP, PORT, SECRET KEY, MONGO_URI, MONGODB_Name
-
-In terminal:
-* Git add/commit/push requirements.txt and Procfile files
-
-In Heroku:
-* click enable automatic deploys
+* create procfile Procfile > web: gunicorn I_Teach_French.wsgi
+* on AWS services use S3 and IAM for your static files
+*
 
 ## Credits
 
 ### Media
 
-* The Wireframes were created using [Balsamiq](https://balsamiq.com/).
-* The 2 images used on the site are by DariuszSankowski and SCY , they were obtained from [Pixabay](https://pixabay.com/)
+* All medias have been created by myself
+* The background picture used on the site is Jibs-breizh from [Pixabay](https://pixabay.com/)
 
 ### Acknowledgements
 
-* The main structure of this site is based on the code provided by Tim Nelson for the Task Manager mini-project presented in the Data centric module of the Full stack Web Developer course form Code Institute.
-* The code for the modal used for the delete functionality is based on [Delete Modal](https://www.w3schools.com/howto/howto_css_delete_modal.asp)
+* code used:
+* Boutique Ado project by Code Institute
+* Stripe checkout by Anthony Herbert at Pretty Printed on Youtube
 
 ### Thank you
 
 * To Everyone at Code Institute for their patience!
-* To the dedicated team of tutors who are always helpful.
-* To my mentor Reuben Ferrante for making time for me outside his timetabled hours.
+* To the dedicated team of tutors who are always helpful
+
 
