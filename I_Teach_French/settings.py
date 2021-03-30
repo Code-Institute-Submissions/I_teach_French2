@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'accounts',
     'products',
     'donations',
-    'storages'
+    'storages',
 ]
 
 MIDDLEWARE = [
