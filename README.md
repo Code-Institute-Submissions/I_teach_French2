@@ -63,6 +63,7 @@ The design makes it straightforward for users to access the main feature of the 
 * [Gitpod](https://gitpod.io/) (development environment) 
 * [Stripe](https://stripe.com/) (for payment)
 * [Heroku](https://heroku.com/) (platform where the site is deployed)
+* Amazon Web Services (https://aws.amazon.com) (for static and media files)
 
 ## Testing
 
@@ -70,24 +71,50 @@ The design makes it straightforward for users to access the main feature of the 
 
 HTML has been validated using [W3 validator](https://validator.w3.org/) and formatted using [Freeformater](https://www.freeformatter.com/).
 CSS has been validated using [W3 CSS validator](http://jigsaw.w3.org/css-validator/validator).
-Lightouse testing from Chrome developer's tools returned positive results.
+
+Lightouse testing from Chrome developer's tools returned positive results with a few issues, not seeming to affect the functioning of the site.
+
 
 * Functionalities:
+
+* I can access a collection of free downloadable teaching resources.
+-> all resources are visible and dowloadable
+* I can search the collection with keywords in French or English.
+-> different keywords testes return relevant resources
+* I can visually assess the nature of the resource.
+-> the images show up and give a good idea of the nature of the resource 
+* I can download the resources in one click.
+-> files are dowloaded when the button is clicked
+* I can create an account and receive a personalised welcome when I log in.
+-> Log in works well (raphaelmar3 version3 for a test user), registering seems to work now, but it took a few attempts at first to register a new user, this might be qn issue to investigate
+* I can make a donation of €5 via Stripe if I want to encourage the creation of more material.
+-> Payment with the stripe test card (4242...) works and redirects the user to the success page. This is the step I had most issues with but it works now.
+
+* I can upload files to the site and share them with a community of teachers.
+-> I can use the admin superuser to create new products easily, when running from gitpod
+* I can receive donations via Stripe from users.
+-> all test donqtions go through successfully to Stripe
+* I can store the resources that I have created online and easily access them when needed.
+-> I can access all my resources (when I am done uploading them) and access them easily with the benefit of the search by keywords functionality.
+
 
 
 ## Deployment to Heroku and AWS:
 
+* install all relevant extensions (see requirements.txt)
 * pip 3 freeze --local > requirements.text
-* create procfile Procfile > web: gunicorn I_Teach_French.wsgi
-* on AWS services use S3 and IAM for your static files
-*
+* create Procfile > web: gunicorn I_Teach_French.wsgi
+* Configure AWS services (S3 and IAM) for your static and media files
+* insert AWS and Stripe keys in Heroku config Vars
+
+
 
 ## Credits
 
 ### Media
 
 * All medias have been created by myself
-* The background picture used on the site is Jibs-breizh from [Pixabay](https://pixabay.com/)
+* The background picture used on the site is by Jibs-breizh from [Pixabay](https://pixabay.com/)
 
 ### Acknowledgements
 
