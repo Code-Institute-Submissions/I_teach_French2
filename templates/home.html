@@ -5,6 +5,7 @@
 <div class="container fluid" id="user">
    <h1>Hi {{user.username}}!<i class="far fa-smile"></i></h1>
    <p>Visit our bank of resources <a href="{% url 'products' %}">here</a>. They are free, and always will be, but if you like our work you can make a <a href="{% url 'donations' %}">donation</a> to suppport us!</p>
+   <p>If you have any questions, please <a href="mailto:raphaelmar@hotmail.fr">contact us</a>.</p>
    <p><a class="btn btn-outline-dark" href="{% url 'logout' %}">Log Out</a></p>
    <p><a class="btn btn-outline-dark"href="{% url 'password_reset' %}">Reset Password</a></p>
 </div>

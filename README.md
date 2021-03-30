@@ -6,7 +6,7 @@ As a teacher, we spend a lot of time preparing resources that are engaging for s
 
 ### Project goals
 
-I Teach French aims to provide free, easily accessible downloadable resources for teachers to use in their lessons. The search function allows users to enter key words relating to the topic they want to work on and quickly assess the nature of the resource with an image, the language skill, the level and a description in French and English, before they download it.There is a possibility to leave a donation of 5€ for users who think that they have found some value in the resources.
+I Teach French aims to provide free, easily accessible downloadable resources for teachers to use in their lessons. The search function allows users to enter key words relating to the topic they want to work on and quickly assess the nature of the resource with an image, the language skill, the level and a description in French and English, before they download it.There is a possibility to leave a donation of 5€ for users who think that they have found some value in the resources. Similar sites that exist today operate either on a subscription basis (frenchteacher.net), or they charge for resources (tes.com/teaching-resources) or they are riddled with adverts which make for an unpleasant user experience (fr.islcollective.com).
 
 ### User stories
 
@@ -21,7 +21,7 @@ As a user of I Teach French
 As the owner of the site
 * I can upload files to the site and share them with a community of teachers.
 * I can receive donations via Stripe from users.
-* I can store the resources that I have created online and easily access them.
+* I can store the resources that I have created online and easily access them when needed.
 
 ### design choices
 
