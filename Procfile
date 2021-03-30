@@ -1,1 +1,1 @@
-web: python app.py
+web: gunicorn I_Teach_French.wsgi
